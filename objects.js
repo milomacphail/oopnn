@@ -1,12 +1,21 @@
-var userOne = {
-  email: 'ryu@ninjas.com',
-  name: 'Ryu',
+class User  {
+  constructor(email, name){
+    this.email = email;
+    this.name = name;
+  }
   login(){
-    console.log(this.email, " has logged in.");
-  },
+    console.log(this.email, " just logged in!");
+  }
   logout(){
-    console.log(this.email, " has logged out.");
-  } 
-};
+    console.log(this.email, " just logged out!");
+  }
+}
 
-console.log(userOne.name);
+var userOne = new User ("ryu@ninjas.com", "Ryu");
+var userTwo = new User ("yoshi@mariokorp.com", "Yoshi");
+
+console.log(userOne);
+console.log(userTwo);
+
+userOne.login();
+userTwo.logout();
